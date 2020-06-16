@@ -16,13 +16,6 @@ import edna, tecal, idtel, pecfo, stsg, teprosif, tevi
 
 import constantes
 
-
-token = os.environ['TELEGRAM_TOKEN']
-#some_api_token = os.environ['SOME_API_TOKEN']
-
-# If you use redis, install this add-on https://elements.heroku.com/addons/heroku-redis
-#r = redis.from_url(os.environ.get("REDIS_URL"))
-
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=constantes.TEXTO_PRINCIPAL
                             )
@@ -30,7 +23,10 @@ def start(update, context):
 def unknown(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text='No entendí el comando. Escribe "Volver" para '
                                                                     'volver al menú principal')
-    
+
+
+BOT_KEY = os.environ['BOT_KEY']
+
 def qetc(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text='Karl Heitmann')
 
@@ -41,7 +37,7 @@ def define_afasia(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=constantes.DEF_AFASIA)
 
 if __name__ == '__main__':
-    updater = Updater(use_context=True)
+    updater = Updater(token=BOT_KEY, use_context=True)
     dispatcher = updater.dispatcher
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                         level=logging.INFO)
