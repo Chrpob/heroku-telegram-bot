@@ -16,6 +16,9 @@ import edna, tecal, idtel, pecfo, stsg, teprosif, tevi
 
 import constantes
 
+token = os.environ['TELEGRAM_TOKEN']
+
+
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=constantes.TEXTO_PRINCIPAL
                             )
