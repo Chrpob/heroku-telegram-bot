@@ -16,9 +16,7 @@ import edna, tecal, idtel, pecfo, stsg, teprosif, tevi
 
 import constantes
 
-token = os.environ['TELEGRAM_TOKEN']
-
-
+token = os.environ['655568727:AAG2sf63E8NVAgaqToaNHofRAGE_6yQUtyU']
 
 
 def start(update, context):
