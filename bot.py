@@ -41,7 +41,7 @@ def define_afasia(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=constantes.DEF_AFASIA)
 
 if __name__ == '__main__':
-    updater = Updater(token=BOT_KEY, use_context=True)
+    updater = Updater(use_context=True)
     dispatcher = updater.dispatcher
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                         level=logging.INFO)
