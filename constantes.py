@@ -1,6 +1,6 @@
-TEXTO_PRINCIPAL = '¿Qué es?\n FonoaudiologaBot es una robot que colabora optimiznado el tiempo en el cálculo de desviaciones ' \
+TEXTO_PRINCIPAL = 'FonoaudiologaBot 🤖 es una robot que colabora optimizando el tiempo en el cálculo de desviaciones ' \
                   'estándar, percentiles y puntajes en distintas pruebas.' \
-                  'Conoce como apoyar el desarrollo del proyecto en /apoyar\n\n' \
+                  ' Conoce como apoyar el desarrollo del proyecto en /apoyar\n\n' \
                   'Las pruebas incluidas y comandos son:\n\n' \
                   '/edna para calcular EDNA\n' \
                   '/idtel para calcular IDTEL\n' \
