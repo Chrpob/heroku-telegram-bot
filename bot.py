@@ -77,8 +77,10 @@ if __name__ == '__main__':
     start_handler = CommandHandler('start', start)
     dispatcher.add_handler(start_handler)
 
+    dispatcher.add_handler(start_handler)
     dispatcher.add_handler(CommandHandler('autor', qetc))
     dispatcher.add_handler(CommandHandler('quien_es_tu_creador', qetc))
+    dispatcher.add_handler(CommandHandler('apoyar', apoyar))
     dispatcher.add_handler(CommandHandler('define', define)) # XXX Aqui agregamos la funcion /define.
     dispatcher.add_handler(CommandHandler('define_abuso_vocal', define_abuso_vocal)) # XXX Aqui agregamos la funcion /define_abuso_vocal
     dispatcher.add_handler(CommandHandler('define_afasia', define_afasia)) # XXX Aqui agregamos la funcion /define_afasia
