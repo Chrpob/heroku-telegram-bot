@@ -1,8 +1,6 @@
-TEXTO_PRINCIPAL = 'F.A.Q.\n ¿Qué es?\n Fonocalculadora es una aplicación móvil creada para facilitar el trabajo de ' \
-                  'fonoaudiólogos/as, disminuyendo y optimizando el tiempo empleado en el cálculo de desviaciones ' \
-                  'estándar, percentiles y puntajes de cada una de las pruebas omitiendo la necesidad de recurrir al ' \
-                  'manual para obtener el o los datos necesarios. Las pruebas incluidas son: TEVI-R, STSG, ' \
-                  'TEPROSIF-R, TECAL, EDNA, IDTEL, PECFO. Los comandos son:\n\n' \
+TEXTO_PRINCIPAL = '¿Qué es?\n FonoaudiologaBot es una robot que colabora optimiznado el tiempo en el cálculo de desviaciones ' \
+                  'estándar, percentiles y puntajes en distintas pruebas.' \
+                  'Las pruebas incluidas y comandos son:\n\n' \
                   'Indicadores\n\n' \
                   '/edna para calcular EDNA\n' \
                   '/idtel para calcular IDTEL\n' \
