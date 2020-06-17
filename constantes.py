@@ -1,7 +1,8 @@
-TEXTO_PRINCIPAL = 'F.A.Q.\n ¿Qué es?\n Fonocalculadora es una aplicación móvil creada para facilitar el trabajo de ' \
-                  'fonoaudiólogos/as, disminuyendo y optimizando el tiempo empleado en el cálculo de desviaciones ' \
-                  'estándar, percentiles y puntajes de cada una de las pruebas omitiendo la necesidad de recurrir al ' \
-                  'manual para obtener el o los datos necesarios. Las pruebas incluidas son: TEVI-R, STSG, ' \
+TEXTO_PRINCIPAL = 'Fonoaudióloga Bot es una robot que te permite obtener los calculos de las principales pruebas'\
+                  'Además, obtener definiciones de conceptos importantes para la fonoaudiología'\
+                  'Puedes apoyar el desarrollo comprando un café: https://www.buymeacoffee.com/presionaenter'\
+                  'Si encontraste algun error, por favor, informalo en https://presionaenter.com/bug
+                  'Las pruebas incluidas son: TEVI-R, STSG, ' \
                   'TEPROSIF-R, TECAL, EDNA, IDTEL, PECFO. Los comandos son:\n\n' \
                   'Indicadores\n\n' \
                   '/edna para calcular el EDNA\n' \
@@ -11,11 +12,11 @@ TEXTO_PRINCIPAL = 'F.A.Q.\n ¿Qué es?\n Fonocalculadora es una aplicación móv
                   '/teprosif para calcular el TEPROSIF-R\n' \
                   '/tevi para calcular el TEVI\n' \
                   '/tecal para calcular el TECAL\n\n' \
-                  'Definiciones\n\n' \
-                  '/define abuso vocal\n' \
-                  '/define afasia\n' \
-                  '/define_abuso_vocal \n' \
-                  '/define_afasia'
+                 ## 'Definiciones\n\n' \
+                  #'/define abuso vocal\n' \
+                  #'/define afasia\n' \
+                  #'/define_abuso_vocal \n' \
+                  #'/define_afasia'
 
 DEF_ABUSO_VOCAL = '- Abuso vocal\n' \
                   'Un mal uso vocal puede llevar a un abuso. Las conductas abusivas pueden ser: uso prolongado del ' \
