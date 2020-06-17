@@ -1,7 +1,9 @@
-TEXTO_PRINCIPAL = 'Fonoaudióloga Bot es una robot que te permite obtener los calculos de las principales pruebas.' \
-                  'Además, obtener definiciones de conceptos importantes para la fonoaudiología. \n\n' \
-    
-                  'Las pruebas incluidas y sus comandos son\n\n' \
+TEXTO_PRINCIPAL = 'F.A.Q.\n ¿Qué es?\n Fonocalculadora es una aplicación móvil creada para facilitar el trabajo de ' \
+                  'fonoaudiólogos/as, disminuyendo y optimizando el tiempo empleado en el cálculo de desviaciones ' \
+                  'estándar, percentiles y puntajes de cada una de las pruebas omitiendo la necesidad de recurrir al ' \
+                  'manual para obtener el o los datos necesarios. Las pruebas incluidas son: TEVI-R, STSG, ' \
+                  'TEPROSIF-R, TECAL, EDNA, IDTEL, PECFO. Los comandos son:\n\n' \
+                  'Indicadores\n\n' \
               
                   '/edna para calcular el EDNA\n' \
                   '/idtel para calcular el IDTEL\n' \
