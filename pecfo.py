@@ -1,7 +1,7 @@
 import os
 
 # from modelos.edna import Edna, DESEMPENO_NARRATIVO, COMPRENSION_DISCURSO_NARRATIVO
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ParseMode
 
 from telegram.ext import Updater, CallbackQueryHandler
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, Filters
@@ -33,7 +33,8 @@ def set_edad(update, context):
     text = update.message.text
     context.user_data['edad'] = text
     update.message.reply_text(
-        f"Edad es {text}.\nEscriba el puntaje total.")
+        f"Edad es {text}.\nEscriba el *puntaje total*.",
+                parse_mode=ParseMode.MARKDOWN)
 
     return S_PUNTAJE_TOTAL
 
@@ -42,14 +43,16 @@ def set_puntaje_total(update, context):
     text = update.message.text
     context.user_data['puntaje_total'] = text
     update.message.reply_text(
-        f"Puntaje total: {text}.\nEscriba el puntaje de conciencia silábica")
+        f"Puntaje total: {text}.\nEscriba el *puntaje de conciencia silábica*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_CONCIENCIA_SILABICA
 
 def set_conciencia_silabica(update, context):
     text = update.message.text
     context.user_data['conciencia_silabica'] = text
     update.message.reply_text(
-        f"Puntaje de conciencia silábica: {text}.\nEscriba el puntaje de conciencia fonémica")
+        f"Puntaje de conciencia silábica: {text}.\nEscriba el *puntaje de conciencia fonémica*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_CONCIENCIA_FONEMICA
 
 def set_conciencia_fonemica(update, context):

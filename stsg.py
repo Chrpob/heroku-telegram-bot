@@ -1,7 +1,7 @@
 import os
 
 # from modelos.edna import Edna, DESEMPENO_NARRATIVO, COMPRENSION_DISCURSO_NARRATIVO
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ParseMode
 
 from telegram.ext import Updater, CallbackQueryHandler
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, Filters
@@ -34,7 +34,8 @@ def set_edad(update, context):
     text = update.message.text
     context.user_data['edad'] = text
     update.message.reply_text(
-        f"Edad es {text}.\nEscriba el puntaje expresivo.")
+        f"Edad es {text}.\nEscriba el *puntaje expresivo*.",
+                parse_mode=ParseMode.MARKDOWN)
 
     return S_EXPRESIVO
 
@@ -43,7 +44,8 @@ def set_expresivo(update, context):
     text = update.message.text
     context.user_data['expresivo'] = text
     update.message.reply_text(
-        f"Puntaje expresivo es {text}.\nEscriba el puntaje receptivo.")
+        f"Puntaje expresivo es {text}.\nEscriba el *puntaje receptivo*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_RECEPTIVO
 
 def set_receptivo(update, context):

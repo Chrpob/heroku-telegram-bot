@@ -1,7 +1,7 @@
 import os
 
 from modelos.idtel import Idtel
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ParseMode
 
 from telegram.ext import Updater, CallbackQueryHandler
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, Filters
@@ -30,7 +30,8 @@ def set_edad(update, context):
     text = update.message.text
     context.user_data['edad'] = text
     update.message.reply_text(
-        f"Edad es {text}.\nEscriba el microdominio fonológico.")
+        f"Edad es {text}.\nEscriba el *microdominio fonológico*.",
+                parse_mode=ParseMode.MARKDOWN)
 
     return S_FONOLOGICO
 
@@ -38,14 +39,16 @@ def set_fonologico(update, context):
     text = update.message.text
     context.user_data['fonologico'] = text
     update.message.reply_text(
-        f"Microdominio fonológico es {text}.\nEscriba el microdominio morfosintáctico.")
+        f"Microdominio fonológico es {text}.\nEscriba el *microdominio morfosintáctico*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_MORFOLOGICO
 
 def set_morfologico(update, context):
     text = update.message.text
     context.user_data['morfologico'] = text
     update.message.reply_text(
-        f"Microdominio morfológico es {text}.\nEscriba el microdominio semántico.")
+        f"Microdominio morfológico es {text}.\nEscriba el *microdominio semántico*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_SEMANTICO
 
 
@@ -53,7 +56,8 @@ def set_semantico(update, context):
     text = update.message.text
     context.user_data['semantico'] = text
     update.message.reply_text(
-        f"Microdominio semántico es {text}.\nEscriba el microdominio pragmático.")
+        f"Microdominio semántico es {text}.\nEscriba el *microdominio pragmático*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_PRAGMATICO
 
 def set_pragmatico(update, context):

@@ -1,7 +1,7 @@
 import os
 
 from modelos.tecal import Tecal
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ParseMode
 
 from telegram.ext import Updater, CallbackQueryHandler
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, Filters
@@ -26,7 +26,8 @@ def set_vocabulario(update, context):
     text = update.message.text
     context.user_data['vocabulario'] = text
     update.message.reply_text(
-        'Ha establecido el puntaje de vocabulario: {}. Ahora ingrese la puntuación de morfologia'.format(text.lower()))
+        'Ha establecido el puntaje de vocabulario: {}. Ahora ingrese la *puntuación de morfologia*.'.format(text.lower()),
+                parse_mode=ParseMode.MARKDOWN)
     return MORFOLOGIA
 
 
@@ -34,14 +35,16 @@ def set_morfologia(update, context):
     text = update.message.text
     context.user_data['morfologia'] = text
     update.message.reply_text(
-        'Ha establecido el puntaje de morfología: {}. Ahora ingrese la puntuación de sintaxis'.format(text.lower()))
+        'Ha establecido el puntaje de morfología: {}. Ahora ingrese la *puntuación de sintaxis*.'.format(text.lower()),
+                parse_mode=ParseMode.MARKDOWN)
     return SINTAXIS
 
 def set_sintaxis(update, context):
     text = update.message.text
     context.user_data['sintaxis'] = text
     update.message.reply_text(
-        'Ha establecido el puntaje de sintaxis: {}. Ahora ingrese la puntuación total'.format(text.lower()))
+        'Ha establecido el puntaje de sintaxis: {}. Ahora ingrese la *puntuación total*'.format(text.lower()),
+                parse_mode=ParseMode.MARKDOWN)
     return TOTAL
 
 def set_total(update, context):
@@ -51,9 +54,6 @@ def set_total(update, context):
     edad = ud['edad']
     individuo = Tecal(edad[0], ud['vocabulario'], ud['morfologia'], ud['sintaxis'], ud['total'])
 
-    # update.message.reply_text(
-    #     'Ha establecido el puntaje de sintaxis: {}.\nEl resultado es el siguiente: \n\n{}'.format(text.lower(), individuo.resultados),
-    #     reply_markup=markup_edad)
     update.message.reply_text(
         'Ha establecido el puntaje de sintaxis: {}.\nEl resultado es el siguiente:\n\n{}'.format(text.lower(), individuo),
         reply_markup=markup_edad)

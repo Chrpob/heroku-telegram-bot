@@ -1,7 +1,7 @@
 import os
 
 from modelos.edna import Edna, DESEMPENO_NARRATIVO, COMPRENSION_DISCURSO_NARRATIVO
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ParseMode
 
 from telegram.ext import Updater, CallbackQueryHandler
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, Filters
@@ -72,7 +72,8 @@ def seleccionar_edad(update, context):
     text = update.message.text
     context.user_data['edad'] = text
     update.message.reply_text(
-        'Ha seleccionado este rango de edad: {}.\nAhora ingrese la puntuación de Desempeño Narrativo'.format(text.lower()))
+        'Ha seleccionado este rango de edad: {}.\nAhora ingrese la puntuación de *desempeño narrativo*'.format(text.lower()),
+                parse_mode=ParseMode.MARKDOWN)
 
     # if text.lower() == '4 - 4.11 años':
     #     update.message.reply_text()
@@ -81,7 +82,8 @@ def seleccionar_edad(update, context):
 def set_desempeno_narrativo(update, context):
     text = update.message.text
     context.user_data[DESEMPENO_NARRATIVO] = text
-    update.message.reply_text('Desempeño narrativo OK: {}.\nIngrese ahora la puntuación de Comprensión del Discurso Narrativo'.format(text.lower()))
+    update.message.reply_text('Desempeño narrativo OK: {}.\nIngrese ahora la puntuación de *comprensión del discurso narrativo*'.format(text.lower()),
+                parse_mode=ParseMode.MARKDOWN)
     return STATE_COMPRENSION_DISCURSO_NARRATIVO
 
 def set_comprension_discurso_narrativo(update, context):
@@ -89,7 +91,7 @@ def set_comprension_discurso_narrativo(update, context):
     ud = context.user_data
     context.user_data[COMPRENSION_DISCURSO_NARRATIVO] = text
     individuo = Edna(ud['edad'][0], ud[DESEMPENO_NARRATIVO], ud[COMPRENSION_DISCURSO_NARRATIVO])
-    update.message.reply_text('Comprensión Discurso Narrativo OK: {}.\nEl calculo es este:\n\n{}'.format(text.lower(), individuo),
+    update.message.reply_text('Comprensión discurso narrativo OK: {}.\nEl calculo es este:\n\n{}'.format(text.lower(), individuo),
                               reply_markup=markup)
     return CHOOSING
 

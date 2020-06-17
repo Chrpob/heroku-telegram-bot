@@ -1,7 +1,7 @@
 import os
 
 # from modelos.edna import Edna, DESEMPENO_NARRATIVO, COMPRENSION_DISCURSO_NARRATIVO
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ParseMode
 
 from telegram.ext import Updater, CallbackQueryHandler
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, Filters
@@ -39,7 +39,8 @@ def set_edad(update, context):
     text = update.message.text
     context.user_data['edad'] = text
     update.message.reply_text(
-        f"Edad es {text}.\nEscriba el puntaje techo.")
+        f"Edad es {text}.\nEscriba el *puntaje techo*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_TECHO
 
 
@@ -47,7 +48,8 @@ def set_techo(update, context):
     text = update.message.text
     context.user_data['puntaje_techo'] = text
     update.message.reply_text(
-        f"Puntaje techo: {text}.\nEscriba el error.")
+        f"Puntaje techo: {text}.\nEscriba el *error*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_ERROR
 
 def set_error(update, context):

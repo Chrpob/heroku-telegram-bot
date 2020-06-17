@@ -12,6 +12,8 @@ TEXTO_PRINCIPAL = 'F.A.Q.\n ¿Qué es?\n Fonocalculadora es una aplicación móv
                   '/tevi para calcular el TEVI\n' \
                   '/tecal para calcular el TECAL\n\n' \
                   'Definiciones\n\n' \
+                  '/define abuso vocal\n' \
+                  '/define afasia\n' \
                   '/define_abuso_vocal \n' \
                   '/define_afasia'
 
@@ -28,3 +30,6 @@ DEF_AFASIA = '- Afasia\n' \
 REGEX_ONLY_STRINGS = "[a-zA-Z]+"
 # REGEX_ONLY_NUMBERS = '/(\d+(\.\d+)?)/'
 REGEX_ONLY_NUMBERS = '^[0-9]+$'
+
+INCORRECTA_CANTIDAD_DE_ARGUMENTOS = 'Cantidad incorrecta de palabras para comando /define.\n'\
+                                    'Intente usando una de estas dos: \n/define afasia\n/define abuso vocal'

@@ -1,7 +1,7 @@
 import os
 
 # from modelos.edna import Edna, DESEMPENO_NARRATIVO, COMPRENSION_DISCURSO_NARRATIVO
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ParseMode
 
 from telegram.ext import Updater, CallbackQueryHandler
 from telegram.ext import CommandHandler, ConversationHandler, MessageHandler, Filters
@@ -33,7 +33,8 @@ def set_edad(update, context):
     text = update.message.text
     context.user_data['edad'] = text
     update.message.reply_text(
-        f"Edad es {text}.\nEscriba el valor total PSF.")
+        f"Edad es {text}.\nEscriba el *valor total PSF*.",
+                parse_mode=ParseMode.MARKDOWN)
     return S_PSF
 
 
