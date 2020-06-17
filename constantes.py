@@ -15,7 +15,7 @@ TEXTO_PRINCIPAL = '¿Qué es?\n FonoaudiologaBot es una robot que colabora optim
                   #'/define_abuso_vocal \n' \
                   #'/define_afasia'
 
-TEXTO_APOYO = 'Puedes apoyar el proyecto comprando un café acá: https://www.buymeacoffee.com/presionaenter\n\n' \
+TEXTO_APOYO = 'Puedes apoyar el proyecto comprando un café ☕ acá: https://www.buymeacoffee.com/presionaenter\n\n' \
               'Si encontraste un bug, por favor reportarlo en @PresionaEnter o en https://presionaenter.com/bug'
 
 DEF_ABUSO_VOCAL = '- Abuso vocal\n' \
