@@ -1,7 +1,7 @@
 TEXTO_PRINCIPAL = 'Fonoaudióloga Bot es una robot que te permite obtener los calculos de las principales pruebas'\
                   'Además, obtener definiciones de conceptos importantes para la fonoaudiología'\
                   'Puedes apoyar el desarrollo comprando un café: https://www.buymeacoffee.com/presionaenter'\
-                  'Si encontraste algun error, por favor, informalo en https://presionaenter.com/bug
+                  'Si encontraste algun error, por favor, informalo en https://presionaenter.com/bug'\
                   'Las pruebas incluidas son: TEVI-R, STSG, ' \
                   'TEPROSIF-R, TECAL, EDNA, IDTEL, PECFO. Los comandos son:\n\n' \
                   'Indicadores\n\n' \
