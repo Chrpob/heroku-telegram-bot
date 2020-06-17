@@ -1,5 +1,5 @@
-TEXTO_PRINCIPAL = 'Fonoaudióloga Bot es una robot que te permite obtener los calculos de las principales pruebas\n'
-                  'Además, obtener definiciones de conceptos importantes para la fonoaudiología. \n'
+TEXTO_PRINCIPAL = 'Fonoaudióloga Bot es una robot que te permite obtener los calculos de las principales pruebas. \n'
+                  'Además, obtener definiciones de conceptos importantes para la fonoaudiología. \n'\
                   'Puedes apoyar el desarrollo comprando un café: https://www.buymeacoffee.com/presionaenter \n' \
                   'Si encontraste algun error, por favor, informalo en https://presionaenter.com/bug \n' \ 
     
