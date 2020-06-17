@@ -1,7 +1,7 @@
 TEXTO_PRINCIPAL = '¿Qué es?\n FonoaudiologaBot es una robot que colabora optimiznado el tiempo en el cálculo de desviaciones ' \
                   'estándar, percentiles y puntajes en distintas pruebas.' \
-                  
-                  'Puedes apoyar el desarrollo comprando un café en: https://www.buymeacoffee.com/presionaenter\n' \
+                  'Puedes apoyar el desarrollo comprando un café en: https://www.buymeacoffee.com/presionaenter' \
+
                    'Las pruebas incluidas y comandos son:\n\n' \
                   
                   '/edna para calcular EDNA\n' \
