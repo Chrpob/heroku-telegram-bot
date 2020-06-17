@@ -19,7 +19,7 @@ import constantes
 def start(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=constantes.TEXTO_PRINCIPAL
                             )
-def apoyo(update, context):
+def apoyar(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text=constantes.TEXTO_APOYO
                             )
 
