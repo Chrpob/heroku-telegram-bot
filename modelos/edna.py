@@ -3,6 +3,11 @@ from modelos.percentil import Percentil
 DESEMPENO_NARRATIVO = 'desempeno_narrativo'
 COMPRENSION_DISCURSO_NARRATIVO = 'comprension_discurso_narrativo'
 
+LEER = {
+    DESEMPENO_NARRATIVO: 'desempeño narrativo',
+    COMPRENSION_DISCURSO_NARRATIVO: 'comprensión discurso narrativo'
+}
+
 PRUEBAS_EDNA = {
     DESEMPENO_NARRATIVO,
     COMPRENSION_DISCURSO_NARRATIVO
@@ -39,7 +44,7 @@ class Edna(Percentil):
         else:
             lista = [DESEMPENO_NARRATIVO, COMPRENSION_DISCURSO_NARRATIVO]
         for prueba in lista:
-            texto += f"Resultado {prueba}: {self.resultados[prueba]['resultado']}\nFactor número de desviación estándar: {self.resultados[prueba]['percentil']}\n\n"
+            texto += f"Resultado {LEER[prueba]}: {self.resultados[prueba]['resultado']}\nFactor número de desviación estándar: {self.resultados[prueba]['percentil']}\n\n"
         return texto
 
 

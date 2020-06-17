@@ -3,6 +3,13 @@ MORFOLOGIA = 'morfologia'
 SINTAXIS = 'sintaxis'
 TOTAL = 'total'
 
+LEER = {
+    VOCABULARIO: 'vocabulario',
+    MORFOLOGIA: 'morfología',
+    SINTAXIS: 'sintaxis',
+    TOTAL: 'total'
+}
+
 PROMEDIO = 'promedio'
 SD = 'sd'
 
@@ -31,7 +38,7 @@ class Tecal(object):
     def __repr__(self):
         texto = ''
         for prueba in [VOCABULARIO, MORFOLOGIA, SINTAXIS, TOTAL]:
-            texto += f"Resultado {prueba}: {self.resultados[prueba][RESULTADO]}\nFactor número de desviación estándar: {self.resultados[prueba][N_DESVIACION_ESTANDAR]}\n\n"
+            texto += f"Resultado {LEER[prueba]}: {self.resultados[prueba][RESULTADO]}\nFactor número de desviación estándar: {self.resultados[prueba][N_DESVIACION_ESTANDAR]}\n\n"
         return texto
 
     def set_parametros(self):

@@ -5,6 +5,14 @@ SEMANTICO = 'semantico'
 PRAGMATICO = 'pragmatico'
 TOTAL = 'total'
 
+LEER = {
+    FONOLOGICO: 'fonológico',
+    MORFOLOGICO: 'morfológico',
+    SEMANTICO: 'semántico',
+    PRAGMATICO: 'pragmático',
+    TOTAL: 'total'
+}
+
 PRESENTA_TEL = 'Presenta TEL'
 NO_PRESENTA_TEL = 'No presenta TEL'
 
@@ -36,7 +44,7 @@ class Idtel(object):
         texto = ''
         pruebas = [FONOLOGICO, MORFOLOGICO, SEMANTICO, PRAGMATICO, TOTAL]
         for prueba in pruebas:
-            texto += f"Resultados prueba {prueba}: {self.resultados[prueba]}\n"
+            texto += f"Microdominio {LEER[prueba]}: {self.resultados[prueba]}\n"
         return texto
 
     def set_parametros(self):

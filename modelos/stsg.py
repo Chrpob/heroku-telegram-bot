@@ -3,6 +3,11 @@ from modelos.percentil import Percentil
 PTJE_EXPRESIVO = 'puntaje_expresivo'
 PTJE_RECEPTIVO = 'puntaje_receptivo'
 
+LEER = {
+    PTJE_EXPRESIVO: 'Resultado expresivo',
+    PTJE_RECEPTIVO: 'Resultado receptivo'
+}
+
 class Stsg(Percentil):
     def __init__(self, _edad, _ptje_expresivo, _ptje_receptivo):
         super().__init__(_edad)
@@ -16,7 +21,7 @@ class Stsg(Percentil):
     def __repr__(self):
         texto = ''
         for prueba in [PTJE_EXPRESIVO, PTJE_RECEPTIVO]:
-            texto += f"Prueba {prueba}: {self.resultados[prueba]['resultado']}\nPercentil: {self.resultados[prueba]['percentil']}\n\n"
+            texto += f"{LEER[prueba]}: {self.resultados[prueba]['resultado']}\nPercentil: {self.resultados[prueba]['percentil']}\n\n"
         return texto
 
     def get_percentiles(self):

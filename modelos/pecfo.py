@@ -3,6 +3,13 @@ from modelos.percentil import Percentil
 PTJE_TOTAL = 'puntaje_total'
 PTJE_CONCIENCIA_SILABICA = 'puntaje_conciencia_silabica'
 PTJE_CONCIENCIA_FONEMICA = 'puntaje_conciencia_fonemica'
+
+LEER = {
+    PTJE_TOTAL: 'Puntaje total',
+    PTJE_CONCIENCIA_SILABICA: 'Puntaje conciencia silábica',
+    PTJE_CONCIENCIA_FONEMICA: 'Puntaje conciencia fonémica'
+}
+
 class Pecfo(Percentil):
     def __init__(self, _edad, _ptje_total, _ptje_conciencia_silabica, _ptje_conciencia_fonemica):
         super().__init__(_edad)
@@ -18,7 +25,7 @@ class Pecfo(Percentil):
     def __repr__(self):
         texto = ''
         for prueba in [PTJE_TOTAL, PTJE_CONCIENCIA_SILABICA, PTJE_CONCIENCIA_FONEMICA]:
-            texto += f"Prueba {prueba}: {self.resultados[prueba]['resultado']}\nPercentil: {self.resultados[prueba]['percentil']}\n\n"
+            texto += f"{LEER[prueba]}: {self.resultados[prueba]['resultado']}\nPercentil: {self.resultados[prueba]['percentil']}\n\n"
         return texto
 
 
