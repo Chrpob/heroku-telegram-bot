@@ -4,7 +4,6 @@ TEXTO_PRINCIPAL = 'F.A.Q.\n ¿Qué es?\n Fonocalculadora es una aplicación móv
                   'manual para obtener el o los datos necesarios. Las pruebas incluidas son: TEVI-R, STSG, ' \
                   'TEPROSIF-R, TECAL, EDNA, IDTEL, PECFO. Los comandos son:\n\n' \
                   'Indicadores\n\n' \
-              
                   '/edna para calcular el EDNA\n' \
                   '/idtel para calcular el IDTEL\n' \
                   '/pecfo para calcular el PECFO\n' \
@@ -12,7 +11,7 @@ TEXTO_PRINCIPAL = 'F.A.Q.\n ¿Qué es?\n Fonocalculadora es una aplicación móv
                   '/teprosif para calcular el TEPROSIF-R\n' \
                   '/tevi para calcular el TEVI\n' \
                   '/tecal para calcular el TECAL\n\n' \
-                 ## 'Definiciones\n\n' \
+                  #'Definiciones\n\n' \
                   #'/define abuso vocal\n' \
                   #'/define afasia\n' \
                   #'/define_abuso_vocal \n' \
